@@ -1,28 +1,33 @@
 <?php
-header("Content-Type: application/rss+xml; charset=ISO-8859-1");
-  
-  $rssfeed .= '<?xml version="1.0" encoding="ISO-8859-1"?>';
-  $rssfeed .= '<rss version="2.0"?>';
-  $rssfeed .= '<channel>';
- 
-  $connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234","db_1820680") or die(mysqli_error($connect));
-  $sql = "SELECT * FROM tbl_articles";
-  $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
-  while($row=mysqli_fetch_assoc($query)) {
-    extract($row);
-    
-    $rssfeed .= '<articles>';
-    $rssfeed .= '<title>' . $article_title . '</title>';
-    $rssfeed .= '<description>' . $description . '</description>';
-    $rssfeed .= '<author>' . $author . '</author>';
-    $rssfeed .= '<date_created>' . $date_created . '</date_created';
-    $rssfeed .= '</articles>';
-  }
-  
-  $rssfeed .= '</channel>';
-  $rssfeed .= '</rss>';
+    $conn = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234") or die (mysqli_error($conn));
+    $db = mysqli_select_db($conn, "db_1820680");
 
-  echo $rssfeed .;
+    if(mysqli_connect_errno($conn)){
+        echo "Database connection failed!: ". mysqli_connect_errno();
+    }
+    $sql = "SELECT * FROM tbl_articles";
+    $q = mysqli_query($conn, $sql);
+
+    header("Content-type: text/xml");
+
+    echo "<?xml version='1.0' encoding='UTF-8'?>
+        <rss version='2.0'><channel>";
+    
+    while($r = mysqli_fetch_array($q)){
+        $title = $r['article_title'];
+        $description = $r['description'];
+        $author = $r['author'];
+        $created = $r['date_created'];
+
+
+        echo "<articles>
+        <title>$title</title>
+        <description>$type</description>
+        <author>$author</author>
+        <created>$created</created>
+        </articles>";
+    }
+    echo "</channel></rss>";
 ?>
 
 
