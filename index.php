@@ -20,7 +20,7 @@
     $rss .= '</channel>';
     $rss .= '</rss>';
 
-    $content->getElementsByTagName("articles"); 
+    $content = $rss->getElementsByTagName("articles"); 
 ?>
 
 <table>
