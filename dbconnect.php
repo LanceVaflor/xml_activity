@@ -1,8 +1,9 @@
 <?php
-  date_default_timezone_set("Asia/Manila");
-  define('DB_SERVER','localhost');
-  define('DB_USERNAME','root');
-  define('DB_PASSWORD','');
-  define('DB_DATABASE','db_waters');
-  session_start();
+  $mysqli = new mysqli("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234", "db_1820680");
+
+if ($mysqli->connect_errno) {
+  echo "Connect Failed ".$mysqli->connect_error;
+  
+  exit();
+}
 ?>
