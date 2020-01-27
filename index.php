@@ -19,34 +19,21 @@
     }
     $rss .= '</channel>';
     $rss .= '</rss>';
-
-    $content = $rss->getElementsByTagName("articles"); 
 ?>
 
 <table>
-        <tr>
-            <td>Article Title</td>
-            <td>Content</td>
-            <td>Author</td>
-            <td>Date Created</td>
-        </tr>
-    <?php
-        foreach( $content as $data )
-        {
-           $article_title = $data->getElementsByTagName("article_title")->item(0)->nodeValue;
-           $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
-           $author = $data->getElementsByTagName("author")->item(0)->nodeValue;
-           $created = $data->getElementsByTagName("created")->item(0)->nodeValue;
-
-           echo "<tr>
-                    <td> $article_title </td>
-                    <td> $description </td>
-                    <td> $author </td>
-                    <td> $created </td>
-                 </tr>";
-        }
-          
-    ?>
+    <tr>
+        <td>Article Title</td>
+        <td>Content</td>
+        <td>Author</td>
+        <td>Date Created</td>
+    </tr>
+     <tr>
+        <td>$article_title</td>
+        <td>$description</td>
+        <td>$author</td>
+        <td>$date_created</td>
+    </tr>
 </table>
 
 
