@@ -6,8 +6,7 @@ header("Content-Type: application/rss+xml; charset=ISO-8859-1");
   $rssfeed .= '<channel>';
   
   $sql = "SELECT * FROM tbl_articles";
-  $connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234") or die(mysqli_error($connect));
-  $db = mysqli_select_db($connect,"db_1820680");
+  $connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com", "admin", "root1234","db_1820680") or die(mysqli_error($connect));
   $query = mysqli_query($connect, $sql) or die(mysqli_error($connect));
   while($row=mysqli_fetch_assoc($query)) {
     extract($row);
@@ -22,6 +21,8 @@ header("Content-Type: application/rss+xml; charset=ISO-8859-1");
   
   $rssfeed .= '</channel>';
   $rssfeed .= '</rss>';
+
+  echo $rssfeed .;
 ?>
 
 
