@@ -1,6 +1,6 @@
 <?php
   $domOBJ = new DOMDocument();
-  $domOBJ->load("http://dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com/xml_activity/rss.php");//XML page URL
+  $domOBJ->load("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com/xml_activity/rss.php");//XML page URL
   
   $content = $domOBJ->getElementsByTagName("articles");
 ?>
