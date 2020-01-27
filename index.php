@@ -1,5 +1,5 @@
 <?php
-  $connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","admin","root1234");
+  $connect = mysqli_connect("http://dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","admin","root1234");
   $db = mysqli_select_db($connect, "db_1820680");
   
   $query_database = "SELECT article_id, article_title, description, author, date_created FROM tbl_articles";
