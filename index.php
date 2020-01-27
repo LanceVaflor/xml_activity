@@ -29,10 +29,10 @@
         <td>Date Created</td>
     </tr>
      <tr>
-        <td>$article_title</td>
-        <td>$description</td>
-        <td>$author</td>
-        <td>$date_created</td>
+        <td><?php echo $article_title ?></td>
+        <td><?php echo $description ?></td>
+        <td><?php echo $author?></td>
+        <td><?php echo $date_created?></td>
     </tr>
 </table>
 
