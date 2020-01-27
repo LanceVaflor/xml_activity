@@ -21,18 +21,6 @@
     $rss .= '</rss>';
 ?>
 
-<?php
-while($result= mysqli_fetch_assoc($query)){
-?>
-<ul>
-   <li><?php echo $title ?></li>
-   <li><?php echo $description ?></li>
-   <li><?php echo $author ?></li>
-   <li><?php echo $date_created ?></li>
-</ul>
-<?php
-}
-?>
 
 
 
