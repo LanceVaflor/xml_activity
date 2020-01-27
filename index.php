@@ -12,9 +12,6 @@
         
         $rss .= '<articles>';
         $rss .= '<title>' . $article_title . '</title>';
-        $rss .= '<description>' . $description . '</description>';
-        $rss .= '<author>' . $author . '</author>';
-        $rss .= '<created>' . $date_created . '</created>';
         $rss .= '</articles>';
     }
     $rss .= '</channel>';
