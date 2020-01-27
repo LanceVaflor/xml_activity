@@ -1,5 +1,5 @@
 <?php
-  $connect = mysqli_connect("dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","admin","root1234", "db_1820680") or die (mysqli_error($connect));
+  $connect = mysqli_connect("https://dbrojasdev.cjw42bnplsor.us-east-1.rds.amazonaws.com","admin","root1234", "db_1820680") or die (mysqli_error($connect));
   $query_database = "SELECT * FROM tbl_articles";
   $articlesArray = array();
   if ($result = $mysqli->query($query_database)) {
