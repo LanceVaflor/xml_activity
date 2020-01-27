@@ -19,6 +19,8 @@
     }
     $rss .= '</channel>';
     $rss .= '</rss>';
+
+echo $rss;
 ?>
 
 
