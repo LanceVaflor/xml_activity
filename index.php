@@ -11,10 +11,10 @@
         extract($result);
         
         $rss .= '<articles>';
-        $title .= '<article_title>' . $article_title . '</article_title>';
-        $description .= '<description>' . $description . '</description>';
-        $author .= '<author>' . $author . '</author>';
-        $created .= '<created>' . $date_created . '</created>';
+        $rss .= '<article_title>' . $article_title . '</article_title>';
+        $rss .= '<description>' . $description . '</description>';
+        $rss .= '<author>' . $author . '</author>';
+        $rss .= '<created>' . $date_created . '</created>';
         $rss .= '</articles>';
     }
     $rss .= '</channel>';
