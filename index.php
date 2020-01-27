@@ -11,10 +11,10 @@
         extract($result);
         
         $rss .= '<articles>';
-        $rss .= '<article_title>' . $article_title . '</article_title>';
-        $rss .= '<description>' . $description . '</description>';
-        $rss .= '<author>' . $author . '</author>';
-        $rss .= '<created>' . $date_created . '</created>';
+        $title .= '<article_title>' . $article_title . '</article_title>';
+        $description .= '<description>' . $description . '</description>';
+        $author .= '<author>' . $author . '</author>';
+        $created .= '<created>' . $date_created . '</created>';
         $rss .= '</articles>';
     }
     $rss .= '</channel>';
@@ -29,10 +29,10 @@
         <td>Date Created</td>
     </tr>
      <tr>
-        <td><?php echo $article_title1 ?></td>
-        <td><?php echo $description1 ?></td>
-        <td><?php echo $author1 ?></td>
-        <td><?php echo $date_created1 ?></td>
+        <td><?php echo $title ?></td>
+        <td><?php echo $description ?></td>
+        <td><?php echo $author ?></td>
+        <td><?php echo $date_created ?></td>
     </tr>
 </table>
 
