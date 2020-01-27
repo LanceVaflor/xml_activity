@@ -21,20 +21,12 @@
     $rss .= '</rss>';
 ?>
 
-<table>
-    <tr>
-        <td>Article Title</td>
-        <td>Content</td>
-        <td>Author</td>
-        <td>Date Created</td>
-    </tr>
-     <tr>
-        <td><?php echo $title ?></td>
-        <td><?php echo $description ?></td>
-        <td><?php echo $author ?></td>
-        <td><?php echo $date_created ?></td>
-    </tr>
-</table>
+<ul>
+   <li><?php echo $title ?></li>
+   <li><?php echo $description ?></li>
+   <li><?php echo $author ?></li>
+   <li><?php echo $date_created ?></li>
+</ul>
 
 
 
