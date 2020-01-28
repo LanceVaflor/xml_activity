@@ -7,8 +7,8 @@
     $sql = "SELECT * FROM tbl_articles ORDER BY article_id ASC;";
     $query = mysqli_query($connect, $sql) or die (mysqli_error($connect));
 
-    while($result= mysqli_fetch_assoc($query)){
-        extract($result);
+    while($records= mysqli_fetch_assoc($query)){
+        extract($records);
         
         $rss .= '<articles>';
         $rss .= '<article_title>' . $article_title . '</article_title>';
