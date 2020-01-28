@@ -20,7 +20,7 @@
     $rss .= '</channel>';
     $rss .= '</rss>';
 
-echo $rss;
+    echo $rss;
 ?>
 
 
