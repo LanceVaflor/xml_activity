@@ -22,6 +22,8 @@
             </ul>
         </li>";
  }
+	 
+	 echo $title;
 ?>
 </ul>
 
