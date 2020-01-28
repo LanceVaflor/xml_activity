@@ -2,7 +2,7 @@
  $domOBJ = new DOMDocument();
  $domOBJ->load("https://xmlactivity.herokuapp.com/rss.php");//XML page URL
  
- $content = $domOBJ->getElementsByTagName("shoes");
+ $content = $domOBJ->getElementsByTagName("articles");
  
  ?>
  <ul>
