@@ -20,14 +20,13 @@
      $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
      $author = $data->getElementsByTagName("author")->item(0)->nodeValue;
      $created = $data->getElementsByTagName("created")->item(0)->nodeValue;
-?>
-  <tr>
-      <td> <?php echo $title ?> </td>
-      <td> <?php echo $description ?> </td>
-      <td> <?php echo $author ?> </td>
-      <td> <?php echo $created ?> </td>
-  </tr>
-<?php
+    
+  echo "<tr>
+            <td> $title </td>
+            <td> $description  </td>
+            <td> $author </td>
+            <td> $created </td>
+        </tr> "
   }
 ?>
 </table>
