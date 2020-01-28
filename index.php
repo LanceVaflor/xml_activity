@@ -13,7 +13,6 @@
    $description = $data->getElementsByTagName("description")->item(0)->nodeValue;
    $author = $data->getElementsByTagName("author")->item(0)->nodeValue;
    $created = $data->getElementsByTagName("created")->item(0)->nodeValue;
-   
   
    echo "<li>$title
             <ul>
